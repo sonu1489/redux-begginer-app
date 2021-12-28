@@ -1,0 +1,26 @@
+redux : it is a state managment  library which will soleve the problem of prop drilling 
+=> there are two method to solve this 1.context api and redux 
+=> if the project is small the we can use context with useReducer and if the project  is big then we should use redux.
+
+what is action creater?
+An action creator is a function that  creates  action object and pass the argument value if necessary.
+ex:- const changeWheel = (value) => {
+  return {
+    type: 'CHANGE_WHEEL',
+    value
+  }
+}
+what is reducer?
+A reducer is a pure function that takes an action and the previous state of the application and returns the new state. The action describes what happened and it is the reducer's job to return the new state based on that action.
+
+what does connect in reduc do?
+The connect() function connects a React component to a Redux store. It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+
+what is mapStateToProps?
+mapStateToProps is used for selecting the part of the data from the store that the connected component needs.
+
+why you dispatch an action to updated the state not directly store?
+store. dispatch() is a function provided by the library which accepts an action to perform an action against the state. Redux restricts updating the state to this method only. This strict way of updating the state ensures that the state can not be changed directly either by view or any network callback.
+
+why the reducer return new state instied of upated existind state?
+Yes it is the pattern you must follow. In redux the state is immutable for a few different reasons. 
